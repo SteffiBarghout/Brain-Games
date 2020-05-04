@@ -7,6 +7,8 @@ Technologies Used
 4. express-handlebars.js
 5. body-parser.js
 6. MySQL
+7. .gitignore
+8. .env
 
 Local DB Created
 Jaws db Connection Created 

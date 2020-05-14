@@ -1,5 +1,5 @@
 $(function() {
-    $(".change-puzzle").on("click", function(event) {
+    $(".change-puzzled").on("click", function(event) {
         var id = $(this).data("id");
         var newPuzzled = $(this).data("newpuzzled");
 
@@ -13,7 +13,7 @@ $(function() {
             data: newPuzzledState
         }).then(
             function() {
-                console.log("changed Puzzle to", newPuzzled);
+                console.log("changed puzzled to", newPuzzled);
                 // Reload the page to get the updated list
                 location.reload();
             }

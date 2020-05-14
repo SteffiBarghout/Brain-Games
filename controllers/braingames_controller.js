@@ -3,11 +3,11 @@ var express = require("express");
 var router = express.Router();
 
 // Import the model to use its database functions.
-var puzzles = require("../models/braingames.js");
+var puzzle = require("../models/braingames.js");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
-    puzzles.all(function(data) {
+    puzzle.all(function(data) {
         var hbsObject = {
             puzzles: data
         };
@@ -17,7 +17,7 @@ router.get("/", function(req, res) {
 });
 
 router.post("/api/braingames", function(req, res) {
-    puzzles.create([
+    puzzle.create([
         "name", "puzzled"
     ], [
         req.body.name, req.body.puzzled
@@ -32,7 +32,7 @@ router.put("/api/braingames/:id", function(req, res) {
 
     console.log("condition", condition);
 
-    puzzles.update({
+    puzzle.update({
         puzzled: req.body.puzzled
     }, condition, function(result) {
         if (result.changedRows == 0) {

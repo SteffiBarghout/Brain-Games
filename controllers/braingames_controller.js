@@ -3,7 +3,7 @@ var express = require("express");
 var router = express.Router();
 
 // Import the model to use its database functions.
-var Puzzle = require("./models/braingames.js");
+var Puzzle = require("../models/NewPuzzle.js");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {

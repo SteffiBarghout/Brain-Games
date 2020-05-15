@@ -25,8 +25,7 @@ $(function() {
         event.preventDefault();
 
         var newPuzzle = {
-            name: $("#ca").val().trim(),
-            puzzled: $("[name=puzzled]:checked").val().trim()
+            puzzle_name: $("#pu").val().trim(),
         };
 
         // Send the POST request.

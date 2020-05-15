@@ -4,8 +4,7 @@ var connection = require("../config/connection.js");
 //SQL syntax function to put in question marks for safety to fend off insertion malware ex: ; Drop table;
 function printQuestionMarks(num) {
     var arr = [];
-
-    for (let i = 0; i < num.length; i++) {
+    for (let i = 0; i < num; i++) {
         arr.push("?");
     }
     return arr.toString();
@@ -40,7 +39,7 @@ var orm = {
     },
 
     create: function(table, cols, vals, cb) {
-        var queryString = "INSERT INTO " + tables;
+        var queryString = "INSERT INTO " + table;
 
         queryString += " (";
         queryString += cols.toString();

@@ -1,3 +1,13 @@
+h1 {
+    background-image: url(https://media.giphy.com/media/17EUIjkxrxeIo/giphy.gif);
+    background-repeat: no-repeat;
+}
+
+body {
+    background-image: url(/assets/img/paper.gif);
+    background-repeat: repeat;
+}
+
 li {
     padding: 5px;
     margin: 5px;

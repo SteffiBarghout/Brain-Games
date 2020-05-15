@@ -1,6 +1,6 @@
 var orm = require("../config/orm.js");
 
-var puzzle = {
+var Puzzle = {
     all: function(cb) {
         orm.all("puzzles", function(res) {
             cb(res);
@@ -20,4 +20,4 @@ var puzzle = {
 };
 
 // Export the database functions for the controller.
-module.exports = puzzle;
+module.exports = Puzzle;
